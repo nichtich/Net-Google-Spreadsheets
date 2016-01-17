@@ -208,17 +208,17 @@ Net::Google::Spreadsheets is a Perl module for using Google Spreadsheets API.
 
 Creates Google Spreadsheet API client. It takes arguments below:
 
-=over 2
+=over
 
-=item * username
+=item username
 
 Username for Google. This should be full email address format like 'mygoogleaccount@example.com'.
 
-=item * password
+=item password
 
 Password corresponding to the username.
 
-=item * source
+=item source
 
 Source string to pass to Net::Google::AuthSub.
 
@@ -228,17 +228,17 @@ Source string to pass to Net::Google::AuthSub.
 
 returns list of Net::Google::Spreadsheets::Spreadsheet objects. Acceptable arguments are:
 
-=over 2
+=over
 
-=item * title
+=item title
 
 title of the spreadsheet.
 
-=item * title-exact
+=item title-exact
 
 whether title search should match exactly or not.
 
-=item * key
+=item key
 
 key for the spreadsheet. You can get the key via the URL for the spreadsheet.
 http://spreadsheets.google.com/ccc?key=key
@@ -283,19 +283,25 @@ In OAuth case, like this:
 
 To test this module, you have to prepare as below.
 
-=over 2
+=over
 
-=item * create a spreadsheet by hand
+=item
+
+create a spreadsheet by hand
 
 Go to L<https://docs.google.com/spreadsheets> and create a spreadsheet.
 
-=item * set SPREADSHEETS_TITLE environment variable
+=item
+
+set SPREADSHEETS_TITLE environment variable
 
   export SPREADSHEETS_TITLE='my test spreadsheet'
 
 or so.
 
-=item * add credentials in Google developers console
+=item
+
+add credentials in Google developers console
 
 Go to L<https://console.developers.google.com>
 
@@ -307,14 +313,19 @@ for new credential created, set environment variables CLIENT_ID and CLIENT_SECRE
   export CLIENT_ID='..client_id..'
   export CLIENT_SECRET='..client_secret..'
 
-=item run setup script to get oauth 2.0 access token
+=item 
+
+run setup script to get oauth 2.0 access token
+
   perl t/setup.pl
   follow instruction as:
      - paste URL in browser to get code
      - paste code to generate access token
      - copy access token
 
-=item * set client_id, client_secret and access_token for google.com via Config::Pit
+=item 
+
+set client_id, client_secret and access_token for google.com via Config::Pit
 
 install Config::Pit and setup editor for ppit
   EXPORT EDITOR=vim
@@ -329,9 +340,9 @@ then some editor comes up and type your username and password like
   "client_secret":  '...client_secret...'
   "access_token":   '...access_token...'
 
-=item * run tests
+=item
 
-as always,
+run tests as always:
 
   perl Makefile.PL
   make
@@ -342,6 +353,12 @@ as always,
 =head1 AUTHOR
 
 Nobuo Danjou E<lt>danjou@soffritto.orgE<gt>
+
+=head1 CONTRIBUTORS
+
+Tee Shuwn Yuan <shuwnyuan@binary.com>,
+Felix <felixtubiana@gmail.com>,
+Jakob Voss <voss@gbv.de>
 
 =head1 SEE ALSO
 
